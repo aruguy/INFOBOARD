@@ -1,0 +1,48 @@
+<?php
+	//login
+	require_once "../login.php";
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $database);
+	// Check connection
+	if ($conn->connect_error)
+	{
+		die("Connection failed: " . $conn->connect_error);
+	}
+//take out echo
+//echo "Connected Successfully</br>";
+
+	if (isset ($_POST['date']) && isset ($_POST['operator']) && isset ($_POST['job']) && isset ($_POST['machine']) && isset ($_POST['produced']) && isset ($_POST['hours']))
+	{
+		
+		$day = $_POST['date'];
+		$emp = $_POST['operator'];
+		$job = $_POST['job'];
+		$mch = $_POST['machine'];
+		$pcs = $_POST['produced'];
+		$hrs = $_POST['hours'];
+		$pph = $pcs/$hrs;
+			$query = "select shift from staff where employee='$emp'";
+			$result = $conn->query($query);
+			$result->data_seek(1);
+			$shift = $result->fetch_assoc();
+		$sft = $shift ['shift'];
+		
+		//echo "</br>date: $day";
+		//echo "</br>employee: $emp";
+		//echo "</br>machine: $mch";
+		//echo "</br>pieces: $pcs";
+		//echo "</br>hours: $hrs";
+		//echo "</br>rate: $pph";
+		//echo "</br>shift: $sft";
+		//echo "</br>";
+		
+		$query = "insert into production (operator, machine, pieces, hours, date, shift, rate, job) values('$emp', '$mch', '$pcs', '$hrs', '$day', '$sft', '$pph', '$job')";
+		//echo $query;
+		$result = $conn->query($query);
+			
+	}
+	
+	header("location: http://ubuntu-box/INFOBOARD/productivity/entryform.php");
+	
+//echo "</br>END";
+?>
