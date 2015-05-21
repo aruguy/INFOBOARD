@@ -24,6 +24,9 @@ echo "Connected Successfully</br>";
 			$num = $row['number'];
 			echo "</br>".$num;
 			
+			$query = "select 'sum(pieces)' from 'production' where machine='$num'";
+			$sums =  $conn->query($query);
+			echo $sums;
 			//$query = "</br>select pieces from production where machine='".$num."'";
 			//echo $query "</br>";
 		}
