@@ -1,0 +1,84 @@
+body{min-width:520px;
+}
+/* */
+/* START INDEX */
+#index{text-align: center;
+font-size:large;
+}
+#index h1{color: black;
+font-size: Normal;
+font-weight: bold;
+font-family: Arial, sans-serif;
+text-decoration: underline;
+}
+#index h2{
+}
+#index h3{color: grey;
+font-size: .5em;
+font-weight: normal;
+font-family: Arial, sans-serif;
+}
+#site-map{font-size:.85em;
+float:left;
+}
+/* END INDEX */
+/* */
+/* START ADMINISTRATION */
+#login{padding:1em;
+float:left;
+}
+#admin{float:left;
+padding:1em;
+}
+#add{float:left;
+padding:1em;
+}
+#edit{float:left;
+padding:1em;
+}
+#remove{float:left;
+padding:1em;
+}
+
+#employees{float:left;
+padding:1em;
+}
+#shift1{float:left;
+padding:1em;
+}
+#shift2{float:left;
+padding:1em;
+}
+#shift3{float:left;
+padding:1em;
+}
+#clear{clear:both;
+}
+/* End ADMINISTRATION */
+/* */
+/* START ASSIGNMENTS */
+#machines{font-size:small;
+}
+#machines h1{font-size:small;
+}
+#machines ul{padding:none;
+}
+#table h1{font-size:1em;
+}
+/* End ASSIGNMENTS */
+/* */
+/* START PRODUCTION */
+#form{display:inline;
+}
+
+#form span{float:left;
+padding-right:1.5em;
+}
+table{margin:auto;
+}
+table, th, td{padding:.5em;
+border:1px solid grey;
+//border-collapse:collapse;
+text-align:center;
+}
+/* End PRODUCTION */
