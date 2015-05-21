@@ -31,15 +31,5 @@ echo "Connected Successfully</br>";
 		echo "</br>
 		select sum(pieces) from production where (machine=30 or machine=29 or machine=31 or machine=36 or machine=37 or machine=38 or machine=39) and date='2015-05-20'";
 		//echo $query;
-		echo "</br>end";				
-	
-	
-	$mach = 0
-	
-	//$query = "select pieces from production where machine='$mach'";
-		//$result = $conn->query($query);
-		//if (!$result) die($con->error);
-		//$rows = $result->num_rows;
-						
-						
+		echo "</br>end";
 ?>					
